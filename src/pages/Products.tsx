@@ -2,8 +2,16 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { MessageCircle, ArrowRight, Sun, Lamp, Lightbulb, Factory, Radio } from "lucide-react";
 import { productCategories, whatsappNumber } from "@/data/productCategories";
+
+const iconMap = {
+  Sun,
+  Lamp,
+  Lightbulb,
+  Factory,
+  Radio,
+};
 
 const Products = () => {
   const filledCategories = productCategories.filter(cat => cat.products.length > 0);
@@ -47,7 +55,7 @@ const Products = () => {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filledCategories.map((category, index) => {
-                const Icon = category.icon;
+                const Icon = iconMap[category.iconName];
                 return (
                   <Link
                     key={category.slug}

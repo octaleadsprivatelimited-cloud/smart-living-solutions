@@ -2,8 +2,16 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, ArrowRight, ArrowLeft } from "lucide-react";
+import { MessageCircle, ArrowRight, ArrowLeft, Sun, Lamp, Lightbulb, Factory, Radio } from "lucide-react";
 import { productCategories, getWhatsAppLink, whatsappNumber } from "@/data/productCategories";
+
+const iconMap = {
+  Sun,
+  Lamp,
+  Lightbulb,
+  Factory,
+  Radio,
+};
 
 const ProductCategory = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -28,7 +36,7 @@ const ProductCategory = () => {
     );
   }
 
-  const Icon = category.icon;
+  const Icon = iconMap[category.iconName];
 
   return (
     <>
