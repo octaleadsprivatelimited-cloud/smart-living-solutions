@@ -1,5 +1,3 @@
-import { Lightbulb, Radio, Sun, Lamp, Factory } from "lucide-react";
-
 export interface Product {
   model: string;
   name: string;
@@ -9,7 +7,7 @@ export interface Product {
 export interface ProductCategory {
   title: string;
   slug: string;
-  icon: React.ElementType;
+  iconName: "Sun" | "Lamp" | "Lightbulb" | "Factory" | "Radio";
   products: Product[];
 }
 
@@ -17,7 +15,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Smart Motion Sensor Moon Light",
     slug: "smart-motion-sensor-moon-light",
-    icon: Sun,
+    iconName: "Sun",
     products: [
       { model: "IHT-PML01", name: "Smart Motion Sensor Moon Light", specs: "10W – 6 inches" },
       { model: "IHT-PML02", name: "Smart Motion Sensor Moon Light", specs: "20W – 8 inches" },
@@ -26,7 +24,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Garden Light – with Sensor",
     slug: "garden-light-with-sensor",
-    icon: Lamp,
+    iconName: "Lamp",
     products: [
       { model: "IHT-PGL01", name: "Smart LED Gate Light", specs: "2\" pipe – 20W – Square" },
       { model: "IHT-PGL02", name: "Smart LED Gate Light", specs: "2\" pipe – 15W – Square" },
@@ -35,7 +33,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Flood Light – with Sensor",
     slug: "flood-light-with-sensor",
-    icon: Lightbulb,
+    iconName: "Lightbulb",
     products: [
       { model: "IHT-PFDL01", name: "Smart LED Flood Light", specs: "50W – Square" },
       { model: "IHT-PFDL02", name: "Smart LED Flood Light", specs: "100W – Square" },
@@ -46,7 +44,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Foot / Step Lamp – with Sensor",
     slug: "foot-step-lamp-with-sensor",
-    icon: Lamp,
+    iconName: "Lamp",
     products: [
       { model: "IHT-PFL01", name: "Foot / Step Light", specs: "2W – Module: 2 / 3 / 4 M" },
     ],
@@ -54,7 +52,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "High Bay – with Sensor",
     slug: "high-bay-with-sensor",
-    icon: Factory,
+    iconName: "Factory",
     products: [
       { model: "IHT-PHL01", name: "Smart High Bay", specs: "50W – Round" },
       { model: "IHT-PHL02", name: "Smart High Bay", specs: "100W – Round" },
@@ -65,7 +63,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Inzaus Motion Sensors",
     slug: "inzaus-motion-sensors",
-    icon: Radio,
+    iconName: "Radio",
     products: [
       { model: "S-24", name: "Inzaus Motion Sensor Mini", specs: "PIR – 8m – Surface" },
       { model: "S-24A", name: "Inzaus Motion Sensor Tiny", specs: "PIR – 6m – Ceiling" },
@@ -80,7 +78,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Tube Lights – with Sensor",
     slug: "tube-lights-with-sensor",
-    icon: Lightbulb,
+    iconName: "Lightbulb",
     products: [
       { model: "IHT-PTL01", name: "Tube Light (Plastic)", specs: "2 Feet – 10W – T5 – Box: 20/50" },
       { model: "IHT-PTL02", name: "Tube Light (Plastic)", specs: "4 Feet – 20W – T5 – Box: 20/50" },
@@ -95,7 +93,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Concealed Panel Light – with Sensor",
     slug: "concealed-panel-light-with-sensor",
-    icon: Sun,
+    iconName: "Sun",
     products: [
       { model: "IHT-PPL01", name: "Panel Light (Plastic)", specs: "12W/15W/20W – 6\" – Round/Square" },
       { model: "IHT-PPL02", name: "Panel Light (Plastic)", specs: "10W/15W/18W – 5\" – Round/Square" },
@@ -110,7 +108,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Surface Panel Light – with Sensor",
     slug: "surface-panel-light-with-sensor",
-    icon: Sun,
+    iconName: "Sun",
     products: [
       { model: "IHT-PSL01", name: "Surface Light (Plastic Dim)", specs: "12W/15W/20W – 6\" – Round-Dim" },
       { model: "IHT-PSL02", name: "Surface Light (Metal)", specs: "12W/15W – 6\" – Round/Square" },
@@ -122,7 +120,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Street Light – with Sensor",
     slug: "street-light-with-sensor",
-    icon: Lamp,
+    iconName: "Lamp",
     products: [
       { model: "IHT-PSTL01", name: "Street Light", specs: "24W – 4KV Protection – Pipe ID 45 – Lence" },
       { model: "IHT-PSTL02", name: "Street Light", specs: "36W – 6KV Protection – Pipe ID 45 – Lence" },
@@ -136,7 +134,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "2×2 Panel Light – with Sensor",
     slug: "2x2-panel-light-with-sensor",
-    icon: Sun,
+    iconName: "Sun",
     products: [
       { model: "IHT-2X2PL01", name: "Panel Light Dimming", specs: "36W – Size: 2×2 – Concealed" },
       { model: "IHT-2X2PL02", name: "Panel Light Dimming", specs: "50W – Size: 2×2 – Concealed" },
@@ -145,7 +143,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "COB Light – with Sensor",
     slug: "cob-light-with-sensor",
-    icon: Lightbulb,
+    iconName: "Lightbulb",
     products: [
       { model: "IHT-PCL01", name: "Smart COB Light (Std on/off)", specs: "7W – Concealed" },
       { model: "IHT-PCL02", name: "Smart COB Light (Std)", specs: "9W – Concealed" },
@@ -158,7 +156,7 @@ export const productCategories: ProductCategory[] = [
   {
     title: "Bulkhead Light – with Sensor",
     slug: "bulkhead-light-with-sensor",
-    icon: Lightbulb,
+    iconName: "Lightbulb",
     products: [
       { model: "IHT-PBL01", name: "Smart BulkHead Light", specs: "10W – Oblong" },
       { model: "IHT-PBL02", name: "Smart BulkHead Light", specs: "20W – Oblong" },
