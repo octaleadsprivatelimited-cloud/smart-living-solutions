@@ -42,8 +42,19 @@ const About = () => {
       </Helmet>
       <Layout>
         {/* Hero Section */}
-        <section className="pt-32 pb-16 bg-hero relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
+        <section className="pt-24 pb-10 bg-hero relative overflow-hidden">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'url(/hero-bg.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: 0.5
+            }}
+          />
+          <div className="absolute inset-0 bg-primary/30 z-[1]" />
+          <div className="absolute inset-0 opacity-10 z-[1]">
             <div className="absolute top-20 right-20 w-72 h-72 bg-accent rounded-full blur-3xl" />
           </div>
           <div className="container-main relative z-10">

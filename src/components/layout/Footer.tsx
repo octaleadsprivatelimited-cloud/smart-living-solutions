@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Youtube, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -37,10 +37,39 @@ const Footer = () => {
                 />
               </div>
             </Link>
-            <p className="text-primary-foreground/70 text-xs md:text-sm leading-relaxed">
+            <p className="text-primary-foreground/70 text-xs md:text-sm leading-relaxed mb-4">
               Providing advanced security, automation, and smart living
               solutions in Vijayawada and nearby regions.
             </p>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://youtube.com/@ctechnologiessmartedge?si=86SYE30_vtZUC4T3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-colors group"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="https://www.facebook.com/share/1D7jUKJkaJ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-colors group"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="https://www.instagram.com/c_technologies_smart_edge?igsh=dnRjYzF1OWJxcGM="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-colors group"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -95,9 +124,14 @@ const Footer = () => {
             <ul className="space-y-2 md:space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
-                <span className="text-primary-foreground/70 text-sm">
-                  Vijayawada, Andhra Pradesh, India
-                </span>
+                <a
+                  href="https://maps.app.goo.gl/JBSJFvqbpepJHDtEA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-foreground/70 hover:text-accent transition-colors text-sm"
+                >
+                  Indra Colony, Krishna Lanka, Vijayawada, Andhra Pradesh 520013
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
@@ -120,10 +154,10 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <a
-                  href="mailto:info@ctechsmartedge.com"
+                  href="mailto:ctechnologies.smartedge@gmail.com"
                   className="text-primary-foreground/70 hover:text-accent transition-colors text-sm"
                 >
-                  info@ctechsmartedge.com
+                  ctechnologies.smartedge@gmail.com
                 </a>
               </li>
             </ul>

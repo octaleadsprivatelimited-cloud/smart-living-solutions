@@ -12,6 +12,7 @@ import {
   Clock,
   MessageCircle,
   Send,
+  ArrowRight,
 } from "lucide-react";
 
 const contactInfo = [
@@ -30,14 +31,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "info@ctechsmartedge.com",
-    link: "mailto:info@ctechsmartedge.com",
+    content: "ctechnologies.smartedge@gmail.com",
+    link: "mailto:ctechnologies.smartedge@gmail.com",
   },
   {
     icon: MapPin,
     title: "Location",
-    content: "Vijayawada, Andhra Pradesh, India",
-    link: null,
+    content: "Indra Colony, Krishna Lanka, Vijayawada, Andhra Pradesh 520013",
+    link: "https://maps.app.goo.gl/JBSJFvqbpepJHDtEA",
   },
   {
     icon: Clock,
@@ -96,7 +97,18 @@ const Contact = () => {
       <Layout>
         {/* Hero Section */}
         <section className="pt-32 pb-16 bg-hero relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'url(/hero-bg.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: 0.5
+            }}
+          />
+          <div className="absolute inset-0 bg-primary/30 z-[1]" />
+          <div className="absolute inset-0 opacity-10 z-[1]">
             <div className="absolute top-20 right-20 w-72 h-72 bg-accent rounded-full blur-3xl" />
           </div>
           <div className="container-main relative z-10">
@@ -282,6 +294,53 @@ const Contact = () => {
                       <MessageCircle className="w-5 h-5 mr-2" />
                       Chat on WhatsApp
                     </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="section-padding bg-muted/30">
+          <div className="container-main">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Find Us on Map
+              </h2>
+              <p className="text-muted-foreground">
+                Visit our location in Vijayawada, Andhra Pradesh
+              </p>
+            </div>
+            <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-card">
+              <div className="w-full h-[400px] md:h-[500px]">
+                <iframe
+                  src="https://www.google.com/maps?q=Indra+Colony,+Krishna+Lanka,+Vijayawada,+Andhra+Pradesh+520013&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="C Technologies Smart Edge Location"
+                />
+              </div>
+              <div className="p-6 bg-card border-t border-border">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <MapPin className="w-5 h-5 text-accent shrink-0" />
+                    <span className="text-foreground font-medium">
+                      Indra Colony, Krishna Lanka, Vijayawada, Andhra Pradesh 520013
+                    </span>
+                  </div>
+                  <a
+                    href="https://maps.app.goo.gl/JBSJFvqbpepJHDtEA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 transition-colors font-medium flex items-center gap-2"
+                  >
+                    Open in Google Maps
+                    <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
               </div>

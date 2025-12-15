@@ -21,8 +21,19 @@ const ProductCategory = () => {
   if (!category) {
     return (
       <Layout>
-        <section className="pt-32 pb-16 bg-hero">
-          <div className="container-main text-center">
+        <section className="pt-32 pb-16 bg-hero relative overflow-hidden">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'url(/hero-bg.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: 0.5
+            }}
+          />
+          <div className="absolute inset-0 bg-primary/30 z-[1]" />
+          <div className="container-main text-center relative z-[2]">
             <h1 className="text-4xl font-bold text-primary-foreground mb-4">Category Not Found</h1>
             <Link to="/products">
               <Button variant="hero">
@@ -50,7 +61,18 @@ const ProductCategory = () => {
       <Layout>
         {/* Hero Section */}
         <section className="pt-32 pb-12 bg-hero relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'url(/hero-bg.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: 0.5
+            }}
+          />
+          <div className="absolute inset-0 bg-primary/30 z-[1]" />
+          <div className="absolute inset-0 opacity-10 z-[1]">
             <div className="absolute top-20 right-20 w-72 h-72 bg-accent rounded-full blur-3xl" />
           </div>
           <div className="container-main relative z-10">
@@ -85,6 +107,15 @@ const ProductCategory = () => {
                   className="group bg-card rounded-xl border border-border shadow-soft card-hover p-6 flex flex-col animate-fade-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
+                  {product.image && (
+                    <div className="w-full h-40 mb-4 rounded-lg overflow-hidden bg-muted flex items-center justify-center">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
                   <div className="flex-1">
                     <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full mb-3">
                       {product.model}
