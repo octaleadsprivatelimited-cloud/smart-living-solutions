@@ -8,7 +8,7 @@ export interface Product {
 export interface ProductCategory {
   title: string;
   slug: string;
-  iconName: "Sun" | "Lamp" | "Lightbulb" | "Factory" | "Radio";
+  iconName: "Sun" | "Lamp" | "Lightbulb" | "Factory" | "Radio" | "Camera" | "Fingerprint" | "Video" | "Home" | "DoorOpen" | "Bell" | "Monitor" | "Code" | "Speaker" | "Network" | "Wrench";
   products: Product[];
 }
 
@@ -232,6 +232,138 @@ const getProductImage = (name: string, specs: string): string => {
 };
 
 export const productCategories: ProductCategory[] = [
+  {
+    title: "CCTV & Surveillance Systems (Installation & Maintenance)",
+    slug: "cctv-surveillance-systems",
+    iconName: "Camera",
+    products: [
+      { model: "CCTV-001", name: "CCTV Installation Service", specs: "Professional installation & maintenance", image: "/placeholder.svg" },
+      { model: "CCTV-002", name: "HD & 4K IP Cameras", specs: "High-definition surveillance cameras", image: "/placeholder.svg" },
+      { model: "CCTV-003", name: "Night Vision & IR Cameras", specs: "24/7 monitoring capabilities", image: "/placeholder.svg" },
+      { model: "CCTV-004", name: "Cloud & Local Storage", specs: "Secure video storage solutions", image: "/placeholder.svg" },
+      { model: "CCTV-005", name: "Mobile App Monitoring", specs: "Remote access & monitoring", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Biometric & Access Control Systems",
+    slug: "biometric-access-control",
+    iconName: "Fingerprint",
+    products: [
+      { model: "BIO-001", name: "Fingerprint Recognition System", specs: "Advanced biometric access control", image: "/placeholder.svg" },
+      { model: "BIO-002", name: "Face Recognition System", specs: "AI-powered face recognition", image: "/placeholder.svg" },
+      { model: "BIO-003", name: "RFID Card Access", specs: "Card-based access control", image: "/placeholder.svg" },
+      { model: "BIO-004", name: "Time & Attendance System", specs: "Employee attendance tracking", image: "/placeholder.svg" },
+      { model: "BIO-005", name: "Visitor Management System", specs: "Complete visitor tracking", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Video Door Phones & Intercom Solutions",
+    slug: "video-door-phones-intercom",
+    iconName: "Video",
+    products: [
+      { model: "VDP-001", name: "HD Video Door Phone", specs: "High-definition video display", image: "/placeholder.svg" },
+      { model: "VDP-002", name: "Two-Way Audio Intercom", specs: "Clear audio communication", image: "/placeholder.svg" },
+      { model: "VDP-003", name: "Remote Unlock System", specs: "Mobile app controlled access", image: "/placeholder.svg" },
+      { model: "VDP-004", name: "Multi-Unit Intercom", specs: "Apartment complex solutions", image: "/placeholder.svg" },
+      { model: "VDP-005", name: "Mobile Integration", specs: "Smartphone app integration", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Smart Home & Office Automation",
+    slug: "smart-home-office-automation",
+    iconName: "Home",
+    products: [
+      { model: "AUTO-001", name: "Smart Lighting Control", specs: "Automated lighting systems", image: "/placeholder.svg" },
+      { model: "AUTO-002", name: "AC & Fan Automation", specs: "Climate control automation", image: "/placeholder.svg" },
+      { model: "AUTO-003", name: "Motorized Curtains", specs: "Automated window treatments", image: "/placeholder.svg" },
+      { model: "AUTO-004", name: "Voice Control (Alexa/Google)", specs: "Voice-activated automation", image: "/placeholder.svg" },
+      { model: "AUTO-005", name: "Scene & Schedule Settings", specs: "Custom automation scenes", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Automatic Sliding & Swing Gates",
+    slug: "automatic-sliding-swing-gates",
+    iconName: "DoorOpen",
+    products: [
+      { model: "GATE-001", name: "Sliding Gate System", specs: "Motorized sliding gates", image: "/placeholder.svg" },
+      { model: "GATE-002", name: "Swing Gate System", specs: "Automated swing gates", image: "/placeholder.svg" },
+      { model: "GATE-003", name: "Remote Control Operation", specs: "Wireless remote control", image: "/placeholder.svg" },
+      { model: "GATE-004", name: "Safety Sensors", specs: "Obstacle detection sensors", image: "/placeholder.svg" },
+      { model: "GATE-005", name: "Solar Power Options", specs: "Eco-friendly solar gates", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Intrusion Alarm & Security Systems",
+    slug: "intrusion-alarm-security",
+    iconName: "Bell",
+    products: [
+      { model: "ALARM-001", name: "Motion Sensors (PIR)", specs: "Passive infrared sensors", image: "/placeholder.svg" },
+      { model: "ALARM-002", name: "Door/Window Contacts", specs: "Magnetic contact sensors", image: "/placeholder.svg" },
+      { model: "ALARM-003", name: "Glass Break Detectors", specs: "Acoustic glass break sensors", image: "/placeholder.svg" },
+      { model: "ALARM-004", name: "Siren & Strobe Alerts", specs: "Audio-visual alarm systems", image: "/placeholder.svg" },
+      { model: "ALARM-005", name: "Mobile Notifications", specs: "Real-time alert system", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Computer Hardware Sales & Support",
+    slug: "computer-hardware-sales-support",
+    iconName: "Monitor",
+    products: [
+      { model: "HW-001", name: "Desktop Computers", specs: "Business & home desktops", image: "/placeholder.svg" },
+      { model: "HW-002", name: "Laptop Computers", specs: "Portable computing solutions", image: "/placeholder.svg" },
+      { model: "HW-003", name: "Hardware Repair", specs: "Professional repair services", image: "/placeholder.svg" },
+      { model: "HW-004", name: "Component Upgrades", specs: "RAM, SSD, GPU upgrades", image: "/placeholder.svg" },
+      { model: "HW-005", name: "IT Support Services", specs: "Technical support & maintenance", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Software Installation & Troubleshooting",
+    slug: "software-installation-troubleshooting",
+    iconName: "Code",
+    products: [
+      { model: "SW-001", name: "OS Installation & Setup", specs: "Windows, Linux, macOS", image: "/placeholder.svg" },
+      { model: "SW-002", name: "Application Installation", specs: "Business & productivity software", image: "/placeholder.svg" },
+      { model: "SW-003", name: "Software Troubleshooting", specs: "Fix software issues", image: "/placeholder.svg" },
+      { model: "SW-004", name: "System Optimization", specs: "Performance enhancement", image: "/placeholder.svg" },
+      { model: "SW-005", name: "Data Recovery Services", specs: "Recover lost data", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Projectors & Professional Sound Systems",
+    slug: "projectors-professional-sound",
+    iconName: "Speaker",
+    products: [
+      { model: "AV-001", name: "HD/4K Projectors", specs: "High-resolution projectors", image: "/placeholder.svg" },
+      { model: "AV-002", name: "Conference Room Solutions", specs: "Complete AV setup", image: "/placeholder.svg" },
+      { model: "AV-003", name: "PA & Sound Systems", specs: "Professional audio systems", image: "/placeholder.svg" },
+      { model: "AV-004", name: "Interactive Displays", specs: "Touch-enabled displays", image: "/placeholder.svg" },
+      { model: "AV-005", name: "Video Conferencing Setup", specs: "Remote meeting solutions", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Networking & Structured Cabling",
+    slug: "networking-structured-cabling",
+    iconName: "Network",
+    products: [
+      { model: "NET-001", name: "LAN/WAN Setup", specs: "Local & wide area networks", image: "/placeholder.svg" },
+      { model: "NET-002", name: "Structured Cabling", specs: "Professional cable installation", image: "/placeholder.svg" },
+      { model: "NET-003", name: "Network Infrastructure Design", specs: "Custom network planning", image: "/placeholder.svg" },
+      { model: "NET-004", name: "Network Troubleshooting", specs: "Network issue resolution", image: "/placeholder.svg" },
+      { model: "NET-005", name: "Wireless Network Setup", specs: "WiFi & wireless solutions", image: "/placeholder.svg" },
+    ],
+  },
+  {
+    title: "Annual Maintenance Contracts (AMC)",
+    slug: "annual-maintenance-contracts",
+    iconName: "Wrench",
+    products: [
+      { model: "AMC-001", name: "CCTV AMC", specs: "Annual maintenance for CCTV systems", image: "/placeholder.svg" },
+      { model: "AMC-002", name: "Access Control AMC", specs: "Biometric system maintenance", image: "/placeholder.svg" },
+      { model: "AMC-003", name: "Automation AMC", specs: "Smart home/office maintenance", image: "/placeholder.svg" },
+      { model: "AMC-004", name: "IT Infrastructure AMC", specs: "Computer & network maintenance", image: "/placeholder.svg" },
+      { model: "AMC-005", name: "Complete System AMC", specs: "All-in-one maintenance package", image: "/placeholder.svg" },
+    ],
+  },
   {
     title: "Smart Motion Sensor Moon Light",
     slug: "smart-motion-sensor-moon-light",
