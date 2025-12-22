@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import { ArrowRight, Sun, Lamp, Lightbulb, Factory, Radio } from "lucide-react";
 import { productCategories } from "@/data/productCategories";
 
@@ -45,11 +46,10 @@ const ProductCategories = () => {
                 {/* Category Image */}
                 {categoryImage ? (
                   <div className="w-full h-32 sm:h-40 mb-4 rounded-lg overflow-hidden bg-muted flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <img
+                    <OptimizedImage
                       src={categoryImage}
                       alt={category.title}
-                      loading="lazy"
-                      decoding="async"
+                      priority={index < 4}
                       className="w-full h-full object-contain"
                       style={{ imageRendering: 'auto', willChange: 'transform' }}
                     />

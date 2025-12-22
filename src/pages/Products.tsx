@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import { MessageCircle, ArrowRight, Sun, Lamp, Lightbulb, Factory, Radio, Camera, Fingerprint, Video, Home, DoorOpen, Bell, Monitor, Code, Speaker, Network, Wrench } from "lucide-react";
 import { productCategories, whatsappNumber, getWhatsAppLink } from "@/data/productCategories";
 
@@ -113,11 +114,10 @@ const Products = () => {
                         >
                           {product.image && (
                             <div className="w-full h-32 md:h-40 mb-4 rounded-lg overflow-hidden bg-muted flex items-center justify-center">
-                              <img
+                              <OptimizedImage
                                 src={product.image}
                                 alt={product.name}
-                                loading="lazy"
-                                decoding="async"
+                                priority={categoryIndex === 0 && productIndex < 4}
                                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                                 style={{ imageRendering: 'auto', willChange: 'transform' }}
                               />

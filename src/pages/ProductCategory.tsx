@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import { MessageCircle, ArrowRight, ArrowLeft, Sun, Lamp, Lightbulb, Factory, Radio } from "lucide-react";
 import { productCategories, getWhatsAppLink, whatsappNumber } from "@/data/productCategories";
 
@@ -114,11 +115,10 @@ const ProductCategory = () => {
                 >
                   {product.image && (
                     <div className="w-full h-32 md:h-40 mb-4 rounded-lg overflow-hidden bg-muted flex items-center justify-center">
-                      <img
+                      <OptimizedImage
                         src={product.image}
                         alt={product.name}
-                        loading="lazy"
-                        decoding="async"
+                        priority={index < 4}
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                         style={{ imageRendering: 'auto', willChange: 'transform' }}
                       />

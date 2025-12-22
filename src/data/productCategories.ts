@@ -276,7 +276,7 @@ export const productCategories: ProductCategory[] = [
       { model: "GATE-002", name: "Swing Gate System", specs: "Automated swing gates", image: "/placeholder.svg" },
       { model: "GATE-003", name: "Remote Control Operation", specs: "Wireless remote control", image: "/placeholder.svg" },
       { model: "GATE-004", name: "Safety Sensors", specs: "Obstacle detection sensors", image: "/placeholder.svg" },
-      { model: "GATE-005", name: "Solar Power Options", specs: "Eco-friendly solar gates", image: "/placeholder.svg" },
+      { model: "GATE-005", name: "Solar Power Options", specs: "Eco-friendly solar gates", image: "/products/Solar Power Options.jpg" },
     ],
   },
   {
@@ -284,11 +284,11 @@ export const productCategories: ProductCategory[] = [
     slug: "intrusion-alarm-security",
     iconName: "Bell",
     products: [
-      { model: "ALARM-001", name: "Motion Sensors (PIR)", specs: "Passive infrared sensors", image: "/placeholder.svg" },
-      { model: "ALARM-002", name: "Door/Window Contacts", specs: "Magnetic contact sensors", image: "/placeholder.svg" },
-      { model: "ALARM-003", name: "Glass Break Detectors", specs: "Acoustic glass break sensors", image: "/placeholder.svg" },
-      { model: "ALARM-004", name: "Siren & Strobe Alerts", specs: "Audio-visual alarm systems", image: "/placeholder.svg" },
-      { model: "ALARM-005", name: "Mobile Notifications", specs: "Real-time alert system", image: "/placeholder.svg" },
+      { model: "ALARM-001", name: "Motion Sensors (PIR)", specs: "Passive infrared sensors", image: "/products/Motion Sensors (PIR).avif" },
+      { model: "ALARM-002", name: "Door/Window Contacts", specs: "Magnetic contact sensors", image: "/products/Door,Window Contacts.jpg" },
+      { model: "ALARM-003", name: "Glass Break Detectors", specs: "Acoustic glass break sensors", image: "/products/Glass Break Detectors.jpg" },
+      { model: "ALARM-004", name: "Siren & Strobe Alerts", specs: "Audio-visual alarm systems", image: "/products/Siren & Strobe Alerts.jpg" },
+      { model: "ALARM-005", name: "Mobile Notifications", specs: "Real-time alert system", image: "/products/Mobile Notifications.avif" },
     ],
   },
   {
@@ -296,11 +296,11 @@ export const productCategories: ProductCategory[] = [
     slug: "computer-hardware-sales-support",
     iconName: "Monitor",
     products: [
-      { model: "HW-001", name: "Desktop Computers", specs: "Business & home desktops", image: "/placeholder.svg" },
-      { model: "HW-002", name: "Laptop Computers", specs: "Portable computing solutions", image: "/placeholder.svg" },
-      { model: "HW-003", name: "Hardware Repair", specs: "Professional repair services", image: "/placeholder.svg" },
-      { model: "HW-004", name: "Component Upgrades", specs: "RAM, SSD, GPU upgrades", image: "/placeholder.svg" },
-      { model: "HW-005", name: "IT Support Services", specs: "Technical support & maintenance", image: "/placeholder.svg" },
+      { model: "HW-001", name: "Desktop Computers", specs: "Business & home desktops", image: "/products/Desktop Computers.jpg" },
+      { model: "HW-002", name: "Laptop Computers", specs: "Portable computing solutions", image: "/products/Laptop Computers.jpg" },
+      { model: "HW-003", name: "Hardware Repair", specs: "Professional repair services", image: "/products/Hardware Repair.jpg" },
+      { model: "HW-004", name: "Component Upgrades", specs: "RAM, SSD, GPU upgrades", image: "/products/Component Upgrades.jpg" },
+      { model: "HW-005", name: "IT Support Services", specs: "Technical support & maintenance", image: "/products/IT Support Services.avif" },
     ],
   },
   {
