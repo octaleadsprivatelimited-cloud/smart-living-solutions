@@ -45,13 +45,13 @@ const ProductCategories = () => {
               >
                 {/* Category Image */}
                 {categoryImage ? (
-                  <div className="w-full h-32 sm:h-40 mb-4 rounded-lg overflow-hidden bg-muted flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-full h-32 sm:h-40 mb-4 rounded-lg overflow-hidden bg-muted flex items-center justify-center">
                     <OptimizedImage
                       src={categoryImage}
                       alt={category.title}
                       priority={index < 4}
                       className="w-full h-full object-contain"
-                      style={{ imageRendering: 'auto', willChange: 'transform' }}
+                      style={{ imageRendering: 'auto' }}
                     />
                   </div>
                 ) : (

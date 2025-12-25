@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Youtube, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Youtube, Facebook, Instagram, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [openSection, setOpenSection] = useState<string | null>(null);
+
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? null : section);
+  };
 
   return (
     <footer className="relative bg-primary text-primary-foreground overflow-hidden">
@@ -74,8 +80,20 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-sm md:text-base mb-3 md:mb-6">Quick Links</h4>
-            <ul className="space-y-1.5 md:space-y-3">
+            <button
+              onClick={() => toggleSection('quickLinks')}
+              className="w-full md:w-auto flex items-center justify-between md:justify-start font-bold text-sm md:text-base mb-3 md:mb-6 md:pointer-events-none"
+            >
+              <span>Quick Links</span>
+              <span className="md:hidden">
+                {openSection === 'quickLinks' ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
+              </span>
+            </button>
+            <ul className={`space-y-1.5 md:space-y-3 ${openSection === 'quickLinks' ? 'block' : 'hidden'} md:block`}>
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
@@ -107,8 +125,20 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-bold text-sm md:text-base mb-3 md:mb-6">Our Services</h4>
-            <ul className="space-y-1.5 md:space-y-3">
+            <button
+              onClick={() => toggleSection('services')}
+              className="w-full md:w-auto flex items-center justify-between md:justify-start font-bold text-sm md:text-base mb-3 md:mb-6 md:pointer-events-none"
+            >
+              <span>Our Services</span>
+              <span className="md:hidden">
+                {openSection === 'services' ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
+              </span>
+            </button>
+            <ul className={`space-y-1.5 md:space-y-3 ${openSection === 'services' ? 'block' : 'hidden'} md:block`}>
               {[
                 "CCTV Surveillance",
                 "Access Control",
@@ -130,8 +160,20 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-sm md:text-base mb-3 md:mb-6">Contact Us</h4>
-            <ul className="space-y-2 md:space-y-4">
+            <button
+              onClick={() => toggleSection('contact')}
+              className="w-full md:w-auto flex items-center justify-between md:justify-start font-bold text-sm md:text-base mb-3 md:mb-6 md:pointer-events-none"
+            >
+              <span>Contact Us</span>
+              <span className="md:hidden">
+                {openSection === 'contact' ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
+              </span>
+            </button>
+            <ul className={`space-y-2 md:space-y-4 ${openSection === 'contact' ? 'block' : 'hidden'} md:block`}>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <a
